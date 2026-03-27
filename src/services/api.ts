@@ -7,7 +7,8 @@ import {
   AvailabilityDate,
 } from '../types';
 
-const API_BASE = 'http://localhost:4321/api';
+const FTRL_URL = process.env.EXPO_PUBLIC_FTRL_URL || 'http://localhost:4321';
+const API_BASE = `${FTRL_URL}/api`;
 
 async function request<T>(
   endpoint: string,
